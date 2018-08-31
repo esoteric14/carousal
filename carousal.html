@@ -1,0 +1,114 @@
+<!doctype html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    #carousal-holder{
+        margin:0;
+        height:600px;
+    }
+    #carousal{
+        width:100%;
+        height:100%;
+        margin:0 auto;
+/*      background-color:black;*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+     }
+    .image-holder{
+        width:100%;
+        margin:0 auto;
+/*      background-color:black;*/
+        height:100%;
+     }
+    .item{
+        height:100%;
+        width:100%;
+        object-fit: cover;
+        animation: mymove 3s;
+    
+    }
+
+    
+    @keyframes mymove {
+         from{transform:translate(-100%,0);}
+        }
+    .arrows-holder{
+        width:93%;
+        position:absolute;
+        top:40%;
+        z-index:1;
+        list-style: none;
+    }
+    .arrows-holder>.arrow{
+        display:;
+    }
+    .arrows-holder>.arrow a{
+        color:#fff;
+    }
+    .glyphicon{
+        font-size: 2em;
+    }
+    ul.indicator-holder{
+    position: relative;
+    width: 25%;
+    MARGIN: 0 auto;
+    top: -10%;
+    }
+    ul.indicator-holder li{
+        display:inline-block;
+    }
+   ul.indicator-holder li::before {
+    content: "•"; 
+    font-size: -webkit-xxx-large;
+    padding-right: 8px;
+    color: #fff; 
+   }
+/*
+    ul.indicator-holder li:hover:before{
+        font-size: calc(50% + 20px);
+        transition: 5s;
+    }
+    
+*/
+    
+</style>
+
+<body>
+    <div id="carousal-holder" class="row">
+        <div id="carousal">
+                <ul class="arrows-holder">
+                    <li class="arrow left" style="float:left;"><a onclick="arrowslidePrevious()"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                    <li class="arrow right" style="float:right;"><a onclick="arrowslideNext()"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                </ul>
+                <div class="image-holder">
+                    <img src="images/1.jpg" class="item" alt="imageDescription">
+                    <img src="images/12.jpg" class="item" alt="imageDescription">
+                    <img src="images/3.jpg" class="item" alt="imageDescription">
+                    <img src="images/4.jpg" class="item" alt="imageDescription">
+                    <img src="images/5.jpg" class="item" alt="imageDescription">
+                    <img src="images/6.jpg" class="item" alt="imageDescription">
+                </div>
+                <ul id="indicator-holder" class="indicator-holder">
+                    <!--<li id="indicator-zero" data-slideto="0" onclick="indicatorslide(this.id)"></li>
+                    <li id="indicator-one"  data-slideto="1" onclick="indicatorslide(this.id)"></li>
+                    <li id="indicator-two" data-slideto="2" onclick="indicatorslide(this.id)"></li>
+                    <li id="indicator-three" data-slideto="3" onclick="indicatorslide(this.id)"></li>
+                    <li id="indicator-four" data-slideto="4" onclick="indicatorslide(this.id)"></li>
+                    <li id="indicator-five" data-slideto="5" onclick="indicatorslide(this.id)"></li>
+                    <li id="indicator-six" data-slideto="6" onclick="indicatorslide(this.id)"></li>-->
+                </ul>
+        </div>
+    </div>
+</body>
+<script src="carousal.js"></script>
+
+</html>
